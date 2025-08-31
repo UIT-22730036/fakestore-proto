@@ -1,6 +1,6 @@
 {
   "name": "fakestore-proto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,10 +22,6 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./common/health-check": {
-      "import": "./dist/common/health-check.js",
-      "types": "./dist/common/health-check.d.ts"
     }
   }
 }
