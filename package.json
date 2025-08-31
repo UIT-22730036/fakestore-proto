@@ -1,0 +1,31 @@
+{
+  "name": "fakestore-proto",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "gen:proto": "tsproto --path ./src",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.0",
+    "@grpc/proto-loader": "^0.7.13",
+    "nestjs-proto-gen-ts": "^1.0.21",
+    "rxjs": "^7.8.2",
+    "typescript": "^5.8.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./common/ping-pong": {
+      "import": "./dist/common/ping-pong.js",
+      "types": "./dist/common/ping-pong.d.ts"
+    }
+  }
+}

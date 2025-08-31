@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ping_pong;
+
+service PingPongService {
+  rpc PingPong (PingPongRequest) returns (PingStatus) {}
+}
+
+message PingStatus {
+  string status = 1;
+  string message = 2;
+}
+
+message PingPongRequest {
+  string service_name = 1;
+}
