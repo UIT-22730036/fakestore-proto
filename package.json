@@ -23,9 +23,9 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./common/ping-pong": {
-      "import": "./dist/common/ping-pong.js",
-      "types": "./dist/common/ping-pong.d.ts"
+    "./common/health-check": {
+      "import": "./dist/common/health-check.js",
+      "types": "./dist/common/health-check.d.ts"
     }
   }
 }
