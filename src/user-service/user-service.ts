@@ -15,6 +15,11 @@ export namespace user_service {
             metadata?: Metadata,
             ...rest: any[]
         ): Observable<UserList>;
+        createUser(
+            data: CreateUserRequest,
+            metadata?: Metadata,
+            ...rest: any[]
+        ): Observable<CreateUserResponse>;
     }
     export interface User {
         id?: number;
@@ -29,6 +34,15 @@ export namespace user_service {
     }
     export interface UserList {
         users?: user_service.User[];
+    }
+    export interface CreateUserRequest {
+        email?: string;
+        userName?: string;
+        password?: string;
+        dateOfBirth?: string;
+    }
+    export interface CreateUserResponse {
+        user?: user_service.User;
     }
 }
 

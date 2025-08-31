@@ -5,6 +5,7 @@ message Empty {}
 
 service UserService {
   rpc GetUsers (Empty) returns (UserList) {}
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
 }
 
 message User {
@@ -21,4 +22,15 @@ message User {
 
 message UserList {
   repeated User users = 1;
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string user_name = 2;
+  string password = 3;
+  string date_of_birth = 4;
+}
+
+message CreateUserResponse {
+  User user = 1;
 }
