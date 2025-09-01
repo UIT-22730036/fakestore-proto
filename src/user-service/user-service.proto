@@ -9,7 +9,7 @@ service UserService {
 }
 
 message User {
-  uint64 id = 1;
+  uint32 id = 1;
   string email = 2;
   string user_name = 3;
   string password = 4;
