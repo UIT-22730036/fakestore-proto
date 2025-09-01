@@ -9,6 +9,7 @@ export declare namespace user_service {
     interface UserService {
         getUsers(data: Empty, metadata?: Metadata, ...rest: any[]): Observable<UserList>;
         createUser(data: CreateUserRequest, metadata?: Metadata, ...rest: any[]): Observable<CreateUserResponse>;
+        login(data: LoginRequest, metadata?: Metadata, ...rest: any[]): Observable<LoginResponse>;
     }
     interface User {
         id?: number;
@@ -32,5 +33,12 @@ export declare namespace user_service {
     }
     interface CreateUserResponse {
         user?: user_service.User;
+    }
+    interface LoginRequest {
+        email?: string;
+        password?: string;
+    }
+    interface LoginResponse {
+        token?: string;
     }
 }

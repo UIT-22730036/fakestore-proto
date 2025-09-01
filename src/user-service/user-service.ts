@@ -20,6 +20,11 @@ export namespace user_service {
             metadata?: Metadata,
             ...rest: any[]
         ): Observable<CreateUserResponse>;
+        login(
+            data: LoginRequest,
+            metadata?: Metadata,
+            ...rest: any[]
+        ): Observable<LoginResponse>;
     }
     export interface User {
         id?: number;
@@ -43,6 +48,13 @@ export namespace user_service {
     }
     export interface CreateUserResponse {
         user?: user_service.User;
+    }
+    export interface LoginRequest {
+        email?: string;
+        password?: string;
+    }
+    export interface LoginResponse {
+        token?: string;
     }
 }
 
